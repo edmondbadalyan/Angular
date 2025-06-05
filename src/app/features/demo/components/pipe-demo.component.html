@@ -1,0 +1,82 @@
+<div class="demo-container">
+  <div class="demo-header">
+    <h2>🚀 Демонстрация Custom Pipe</h2>
+    <p class="demo-description">
+      Этот компонент демонстрирует использование кастомного pipe <code>ExclaimPipe</code>,
+      который преобразует текст в верхний регистр и добавляет восклицательный знак.
+    </p>
+  </div>
+
+  <div class="demo-sections">
+    <!-- Основные примеры -->
+    <section class="demo-section">
+      <h3>📝 Основные примеры</h3>
+      <div class="example-grid">
+        <div class="example-card">
+          <h4>Текст</h4>
+          <div class="example-content">
+            <p><strong>Оригинал:</strong> {{ text }}</p>
+            <p><strong>С pipe:</strong> <span class="transformed">{{ text | exclaim }}</span></p>
+          </div>
+        </div>
+
+        <div class="example-card">
+          <h4>Имя</h4>
+          <div class="example-content">
+            <p><strong>Оригинал:</strong> {{ name }}</p>
+            <p><strong>С pipe:</strong> <span class="transformed">{{ name | exclaim }}</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Интерактивный пример -->
+    <section class="demo-section">
+      <h3>⚡ Интерактивный пример</h3>
+      <div class="interactive-demo">
+        <div class="input-group">
+          <label for="customText">Введите свой текст:</label>
+          <input 
+            id="customText"
+            type="text" 
+            [(ngModel)]="customText" 
+            (input)="onCustomTextChange()"
+            placeholder="Введите текст для трансформации..."
+            class="demo-input"
+          >
+        </div>
+        <div class="result" *ngIf="customText">
+          <p><strong>Результат:</strong> <span class="transformed">{{ customText | exclaim }}</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Множественные примеры -->
+    <section class="demo-section">
+      <h3>📊 Множественные примеры</h3>
+      <div class="examples-table">
+        <div class="table-header">
+          <span>Оригинальный текст</span>
+          <span>Трансформированный</span>
+        </div>
+        <div class="table-row" *ngFor="let example of examples">
+          <span>{{ example.original }}</span>
+          <span class="transformed">{{ example.original | exclaim }}</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Информация о pipe -->
+    <section class="demo-section info-section">
+      <h3>ℹ️ О pipe</h3>
+      <div class="info-content">
+        <ul>
+          <li><strong>Название:</strong> ExclaimPipe</li>
+          <li><strong>Функция:</strong> Преобразует текст в верхний регистр и добавляет "!"</li>
+          <li><strong>Использование:</strong> <code>{{ '{{ text | exclaim }}' }}</code></li>
+          <li><strong>Тип:</strong> Standalone pipe (Angular 14+)</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</div> 
