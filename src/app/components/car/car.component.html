@@ -1,0 +1,17 @@
+<div class="car-container" [style.left.px]="car.position.x" [style.top.px]="car.position.y">
+  <div class="car-body" [style.backgroundColor]="car.color">
+    <div class="wheels">
+      <div class="wheel" [class.summer]="car.wheelsType === 'summer'"></div>
+      <div class="wheel" [class.summer]="car.wheelsType === 'summer'"></div>
+    </div>
+  </div>
+  <div class="car-info">
+    <p>Цвет: {{ car.color }}</p>
+    <p>Колеса: {{ car.wheelsType === 'summer' ? 'Летние' : 'Зимние' }}</p>
+  </div>
+  <div class="controls">
+    <button (click)="changeColor('green')">Поменять цвет на зеленый</button>
+    <button (click)="changeWheelsToSummer()">Поменять колёса на летние</button>
+    <button (click)="moveCar()">Двигать</button>
+  </div>
+</div>

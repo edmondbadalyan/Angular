@@ -20,4 +20,8 @@ export class PipeDemoComponent {
     { original: 'typescript' },
     { original: 'разработка' }
   ];
+
+  onCustomTextChange(): void {
+    // Эта функция добавлена для устранения ошибки компиляции.
+  }
 } 
