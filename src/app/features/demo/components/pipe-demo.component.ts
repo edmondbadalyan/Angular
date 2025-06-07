@@ -16,26 +16,8 @@ export class PipeDemoComponent {
   customText = '';
   
   examples = [
-    { original: 'angular', transformed: '' },
-    { original: 'typescript', transformed: '' },
-    { original: 'разработка', transformed: '' }
+    { original: 'angular' },
+    { original: 'typescript' },
+    { original: 'разработка' }
   ];
-
-  constructor() {
-    this.updateExamples();
-  }
-
-  updateExamples() {
-    this.examples.forEach(example => {
-      example.transformed = this.transformText(example.original);
-    });
-  }
-
-  private transformText(text: string): string {
-    return text.toUpperCase() + '!';
-  }
-
-  onCustomTextChange() {
-    // Реактивное обновление при изменении текста
-  }
 } 
