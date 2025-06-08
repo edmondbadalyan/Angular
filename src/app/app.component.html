@@ -1,4 +1,11 @@
 <div class="cars-container">
   <app-car *ngFor="let car of cars$ | async" [car]="car"></app-car>
 </div>
+<nav>
+  <ul>
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/demo">Demo</a></li>
+    <li><a routerLink="/di-example">DI Example</a></li>
+  </ul>
+</nav>
 <router-outlet></router-outlet> 

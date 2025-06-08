@@ -15,6 +15,10 @@ export const routes: Routes = [
     loadChildren: () => import('./features/demo/demo.routes').then(m => m.routes)
   },
   {
+    path: 'di-example',
+    loadComponent: () => import('./components/di-example/di-example.component').then(m => m.DiExampleComponent)
+  },
+  {
     path: '**',
     redirectTo: '/dashboard'
   }
