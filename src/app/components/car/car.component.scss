@@ -1,0 +1,47 @@
+.car-container {
+  position: absolute;
+  transition: left 0.5s ease-in-out;
+}
+
+.car-body {
+  width: 100px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+
+.wheels {
+  position: absolute;
+  bottom: -15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wheel {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  border: 2px solid gray;
+}
+
+.wheel.summer {
+  border-color: yellow;
+}
+
+.car-info {
+  margin-top: 10px;
+}
+
+.controls {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  button {
+    cursor: pointer;
+  }
+} 
